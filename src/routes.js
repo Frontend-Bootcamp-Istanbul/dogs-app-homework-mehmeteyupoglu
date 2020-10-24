@@ -1,8 +1,8 @@
-import React from "react";
 import Homepage from "./containers/Homepage";
-import Goldens from "./containers/Goldens";
-import Cavaliers from "./containers/Cavaliers";
 import FilteredDogs from "./containers/FilteredDogs";
+import Details from "./components/Details";
+import form from "./components/Form"; 
+
 
 const routes = [
     {
@@ -18,11 +18,17 @@ const routes = [
         title: "Filtrelenmis Dogs"
     },
     {
-        path: "/hakkinda",
+        path: "/form",
         exact: false,
-        component: () => {return <div>Hakkinda Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse eveniet expedita fugiat harum iure laudantium libero maxime nesciunt non, nulla odio pariatur porro, quibusdam quis sed suscipit temporibus veritatis voluptate?</div>},
-        title: "Hakkinda"
+        component: form,
+        title: "Form"
     },
+    {
+        path: "/details/:id", 
+        exact: false, 
+        component: Details, 
+        title: 'Details'
+    }
 ];
 
 export default routes;
